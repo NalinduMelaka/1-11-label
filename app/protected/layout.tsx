@@ -17,7 +17,7 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
   }
   return (
       <div>
-        <Navbar />
+        
         {children}
       </div>
   );

@@ -1,5 +1,7 @@
+import Navbar from "@/components/Navbar";
+
 const Page = () => {
-  return (<div>about</div>);
+  return (<div><Navbar /></div>);
 }
 
 export default Page

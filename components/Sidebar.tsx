@@ -16,14 +16,14 @@ const routes = [
   {
     label: 'ArtWorks',
     icon: Component,
-    href: '/artworks',
+    href: '/protected/artwork',
     color: "text-violet-500",
   },
   {
     label: 'Input data',
     icon: FileText,
     color: "text-pink-700",
-    href: '/inputdata',
+    href: '/protected/inputdata',
   },
   {
     label: 'Settings',
