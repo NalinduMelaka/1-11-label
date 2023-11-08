@@ -16,7 +16,7 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
     )
   }
   return (
-      <div>
+      <div className="h-screen bg-[#F1F0E8]">
         
         {children}
       </div>

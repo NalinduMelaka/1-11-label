@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Provider from '@/components/Provider'
 import Sidebar from '@/components/Sidebar'
+import { MyProvider } from '@/context/MyContext'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,14 +22,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className='h-full relative'>
-          <Provider>
+          
           <div className="hidden h-full md:flex md:w-72 md:flex-col md:fixed md:inset-y-0 z-[80] bg-gray-900">
             <Sidebar />
           </div>
           <main className="md:pl-72">
+          <Provider>
+            <MyProvider>
             {children}
-          </main>
+            </MyProvider>
           </Provider>
+          </main>
+          
         </div>
         </body>
     </html>
