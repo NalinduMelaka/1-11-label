@@ -11,7 +11,7 @@ const Profile = (props: Props) => {
   const imgRef = useRef();
 
   return (
-    <div className='relative'>
+    <div className='relative '>
       <Image src='/user.png' alt='user' width={30} height={30}  className='cursor-pointer'
       onClick={() => {
         setOpen(!open);

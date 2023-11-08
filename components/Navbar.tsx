@@ -7,10 +7,10 @@ type Props = {}
 
 const Navbar = (props: Props) => {
   return (
-    <div className='flex items-center p-2 bg-[#ADC4CE] text-white text-sm'>
+    <div className='flex items-center p-2 bg-[#ADC4CE] text-white text-sm w-full'>
       <Mobilesidebar apiLimitCount={0} isPro={false}/>
       <Navbarsearch />
-      <Profile />
+      <Profile  />
     </div>
   )
 }
