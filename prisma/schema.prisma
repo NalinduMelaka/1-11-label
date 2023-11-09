@@ -91,3 +91,70 @@ model art {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
+
+//xml upload settings
+model label {
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  date        String
+  time        String
+  recordcount String
+  runnumber   String
+  strokes     strokexml[]
+}
+
+model strokexml {
+  id                String        @id @default(auto()) @map("_id") @db.ObjectId
+  datelastmodified  String
+  strokenumber      String
+  strokedescription String
+  contractnumber    String
+  constractstatus   String
+  departmentnumber  String
+  season            String
+  supplierseries    String
+  countrycode       String
+  factorycode       String
+  productdesc       String
+  strokelabels      strokelabel[]
+  colours           colour[]
+  label             label         @relation(fields: [labelid], references: [id])
+  labelid           String        @db.ObjectId
+}
+
+model strokelabel {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  labelref      String
+  labelcategory String
+  labeltype     String
+  labelorder    String
+  setname       String
+  stroke        strokexml @relation(fields: [strokeid], references: [id])
+  strokeid      String    @db.ObjectId
+}
+
+model colour {
+  id                String    @id @default(auto()) @map("_id") @db.ObjectId
+  colourname        String
+  colourdescription String
+  storydescription  String
+  stroke            strokexml @relation(fields: [strokeid], references: [id])
+  strokeid          String    @db.ObjectId
+  sizes             size[]
+}
+
+model size {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  primarysize String
+  colour      colour @relation(fields: [colourid], references: [id])
+  colourid    String @db.ObjectId
+  upcs        upc[]
+}
+
+model upc {
+  id            String @id @default(auto()) @map("_id") @db.ObjectId
+  upcnumber     String
+  secondarysize String
+  sellingprice  String
+  size          size   @relation(fields: [sizeid], references: [id])
+  sizeid        String @db.ObjectId
+}

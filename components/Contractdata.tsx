@@ -26,7 +26,7 @@ export default  function Contractdata({ strokeno }: Props) {
   const handleRowClick = (contractNo: string) => {
     console.log('Clicked on contract number:', contractNo);
     setState1(contractNo);
-    setState2(0);
+    setState2('');
     setState3(0);
     setState4(0);
   };

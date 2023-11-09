@@ -4,7 +4,7 @@ import { createContext, useContext, useState, ReactNode } from 'react';
 // Define the shape of your context
 interface MyContextType {
   state1: string;
-  state2: number;
+  state2: string;
   state3: number;
   state4: number;
   inputState1: boolean;
@@ -12,7 +12,7 @@ interface MyContextType {
   inputState3: boolean;
   inputState4: boolean;
   setState1: React.Dispatch<React.SetStateAction<string>>;
-  setState2: React.Dispatch<React.SetStateAction<number>>;
+  setState2: React.Dispatch<React.SetStateAction<string>>;
   setState3: React.Dispatch<React.SetStateAction<number>>;
   setState4: React.Dispatch<React.SetStateAction<number>>;
   setInputState1: React.Dispatch<React.SetStateAction<boolean>>;
@@ -28,7 +28,7 @@ const MyContext = createContext<MyContextType | undefined>(undefined);
 // Create a provider component
 export const MyProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [state1, setState1] = useState<string>('');
-  const [state2, setState2] = useState<number>(0);
+  const [state2, setState2] = useState<string>('');
   const [state3, setState3] = useState<number>(0);
   const [state4, setState4] = useState<number>(0);
   const [inputState1, setInputState1] = useState<boolean>(true)
