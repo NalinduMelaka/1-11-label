@@ -5,7 +5,7 @@ type Props = {}
 
 const page = (props: Props) => {
   return (
-    <div>
+    <div className='h-screen flex justify-center items-center'>
       <UploadForm />
     </div>
   )

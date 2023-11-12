@@ -6,22 +6,22 @@ import { useMyContext } from '@/context/MyContext';
 
 
 const Contract = ()  => {
-  const {state1} = useMyContext();
-  const stroke = state1;
+  const {state5} = useMyContext();
+  const stroke = state5;
   
  
   return (
-    <div>
-      <table className="border-collapse border border-slate-500 text-xs bg-white relative font-mono">
-        <thead>
-        <tr>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14 '></th>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14 '>StrokeNO</th>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14 '>Contract No</th>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14 '>SEASON</th>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14 '>TDEPT</th>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14 '>PRODESC</th>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14 '>STROKE_DESC</th>
+    <div className='overflow-auto w-full'>
+      <table className="border-collapse relative  border border-slate-500 text-xs bg-white font-mono w-full">
+        <thead className='sticky top-0'>
+        <tr >
+          <th className=' border z-10 bg-white border-black  w-40 '></th>
+          <th className=' border z-10 bg-white border-black  w-40 '>StrokeNO</th>
+          <th className=' border z-10 bg-white border-black  w-40 '>Contract No</th>
+          <th className=' border z-10 bg-white border-black  w-40 '>SEASON</th>
+          <th className=' border z-10 bg-white border-black  w-40 '>TDEPT</th>
+          <th className=' border z-10 bg-white border-black  w-40 '>PRODESC</th>
+          <th className=' border z-10 bg-white border-black  w-40 '>STROKE_DESC</th>
         </tr>
         </thead>
         <tbody>

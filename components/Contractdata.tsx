@@ -26,9 +26,9 @@ export default  function Contractdata({ strokeno }: Props) {
   const handleRowClick = (contractNo: string) => {
     console.log('Clicked on contract number:', contractNo);
     setState1(contractNo);
-    setState2('');
-    setState3(0);
-    setState4(0);
+    setState2('000000000000000000000000');
+    setState3('000000000000000000000000');
+    setState4('000000000000000000000000');
   };
   console.log(state1);
   
@@ -46,7 +46,7 @@ export default  function Contractdata({ strokeno }: Props) {
   return (
     <>
     {contracts.map(contract => (
-      <tr key={contract.constractno} onClick={() => handleRowClick(contract.constractno)}>
+      <tr key={contract.constractno} onClick={() => handleRowClick(contract.constractno)} className='hover:bg-violet-50'>
         <td className={`border border-black `}></td>
         <td className={`border border-black ${state1 === contract.constractno?'text-cyan-400':'' }`}>{contract.stroke_id}</td>
         <td className='border border-black'>{contract.constractno}</td>

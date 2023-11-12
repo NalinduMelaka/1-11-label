@@ -23,14 +23,15 @@ export default  function Caredata() {
   const [cares, setCares] = useState<Care[]>([]);
   const { state1,state2,setState2,inputState2, setInputState2,setState3,setState4 } = useMyContext();
   console.log('setcare2 is running...')
-
-  const handleRowClick = (id: string) => {
-    console.log('Clicked on care number:', id);
-    setState2(id);
-    setState3(0);
-    setState4(0);
-  };
   console.log(state2);
+  const handleRowClick = (id: string) => {
+    console.log('cliced');
+    setState2(id);
+    setState3('000000000000000000000000');
+    setState4('000000000000000000000000');
+  };
+  
+
   
   useEffect(() => {
     const fetchCare = async () => {

@@ -42,23 +42,23 @@ const Userinputforcon = ({ strokeno }: Props) => {
     <tr>
           <td className='border border-black'></td>
           <td className='border border-black'>{strokeno}</td>
-          <td className='border border-black'><input className='w-20 bg-white '
+          <td className='border border-black'><input className='w-40 bg-white '
           type='text'
           value={constractno}
           onChange={(e) => setConstractno(e.target.value)}
           /></td>
-          <td className='border border-black'><input className='w-20 bg-white '
+          <td className='border border-black'><input className='w-40 bg-white '
           type='text'
           value={season}
           onChange={(e) => setSeason(e.target.value)}/></td>
-          <td className='border border-black'><input className='w-20 bg-white '
+          <td className='border border-black'><input className='w-40 bg-white '
           type='text'
           value={tdept}
           onChange={(e) => setTdept(e.target.value)}/></td>
-          <td className='border border-black'><input className='w-20 bg-white ' type='text'
+          <td className='border border-black'><input className='w-40 bg-white ' type='text'
           value={prodesc}
           onChange={(e) => setProdesc(e.target.value)}/></td>
-          <td className='border border-black'><input className='w-20 bg-white ' type='text'
+          <td className='border border-black'><input className='w-40 bg-white ' type='text'
           value={strokedesc}
           onChange={(e) => setStrokedesc(e.target.value)
           }

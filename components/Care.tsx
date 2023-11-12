@@ -6,16 +6,17 @@ type Props = {}
 
 const Care = (props: Props) => {
   return (
+    <div className='overflow-auto w-full'>
     <table className="border-collapse border border-slate-500 text-xs bg-white relative font-mono">
-      <thead>
+      <thead className='sticky top-0'>
         <tr>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14'>Ref No</th>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14'>Wash Symbol</th>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14'>Fibre</th>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14'>Zoodes</th>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14'>COO</th>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14'>Caretext</th>
-          <th className='sticky top-0 border z-10 bg-white border-black  w-14'>MPART/FW</th>
+          <th className=' border z-10 bg-white border-black  w-40'>Ref No</th>
+          <th className=' border z-10 bg-white border-black  w-40'>Wash Symbol</th>
+          <th className=' border z-10 bg-white border-black  w-40'>Fibre</th>
+          <th className=' border z-10 bg-white border-black  w-40'>Zoodes</th>
+          <th className=' border z-10 bg-white border-black  w-40'>COO</th>
+          <th className=' border z-10 bg-white border-black  w-40'>Caretext</th>
+          <th className=' border z-10 bg-white border-black  w-40'>MPART/FW</th>
         </tr>
       </thead>
       <tbody>
@@ -23,6 +24,7 @@ const Care = (props: Props) => {
         <Userinputforcare />
       </tbody>
     </table>
+    </div>
   )
 }
 
